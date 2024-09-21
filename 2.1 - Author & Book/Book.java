@@ -1,15 +1,15 @@
 public class Book {
     String name;
-    Author author;
+    AuthorAdvanced author;
     double price;
     int qty = 0;
 
-    Book(String name, Author author, double price){
+    Book(String name, AuthorAdvanced author, double price){
         this.name = name;
         this.author = author;
         this.price = price;
     }
-    Book(String name, Author author, double price, int qty){
+    Book(String name, AuthorAdvanced author, double price, int qty){
         this.name = name;
         this.author = author;
         this.price = price;
@@ -20,7 +20,7 @@ public class Book {
         return name;
     }
 
-    public Author getAuthor(){
+    public AuthorAdvanced getAuthor(){
         return author;
     }
 
