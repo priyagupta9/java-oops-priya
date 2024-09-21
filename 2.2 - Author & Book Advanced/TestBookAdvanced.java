@@ -8,6 +8,29 @@ public class TestBookAdvanced {
         BookAdvanced javaDummy = new BookAdvanced("Java for Dummy", authors, 19.99, 99);
         System.out.println(javaDummy);  // toString()
         System.out.println("Author Names: "+javaDummy.getAuthorNames());
-        System.out.println("Authors: "+javaDummy.getAuthors());
+
+
+        AuthorAdvanced auth[] = javaDummy.getAuthors();
+
+        String  authNames[] = new String[auth.length];
+        String authEmail[] =  new String[auth.length];
+        char authGender[] = new char[auth.length];
+
+        for (int i = 0; i < auth.length; i++) {
+           authNames[i] = auth[i].getName();
+           authEmail[i] = auth[i].getEmail();
+           authGender[i] = auth[i].getGender();
+        }
+
+        String authorsInfo = "";
+        for (int i = 0; i < auth.length; i++) {
+            authorsInfo = authorsInfo + "[name="+authNames[i]+", email="+authEmail[i]+", gender="+authGender[i]+"]";
+            
+            if(i < auth.length - 1){
+                authorsInfo+=",";
+            }
+        }
+
+        System.out.println("Authors: "+ authorsInfo);
     }
 }
