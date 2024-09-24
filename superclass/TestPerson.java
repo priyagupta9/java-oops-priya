@@ -1,3 +1,5 @@
+package superclass;
+
 public class TestPerson {
     public static void main(String[] args) {
         Person P1 = new Person("Priya Gupta", "Delhi");

@@ -1,3 +1,5 @@
+package superclass;
+
 public class Person{
     private String name, address;
 
